@@ -1,8 +1,9 @@
 package com.tien.main;
 import com.formdev.flatlaf.*;
-import com.tien.model.LoginForm;
+import com.tien.form.LoginForm;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             UIManager.setLookAndFeel(new FlatDarkLaf());  // Chọn giao diện sáng
-        } catch (Exception e) {
+        } catch (UnsupportedLookAndFeelException e) {
             System.err.println("Không thể khởi tạo FlatLaf");
         }
 

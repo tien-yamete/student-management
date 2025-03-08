@@ -11,6 +11,13 @@
         <maven.compiler.target>22</maven.compiler.target>
         <exec.mainClass>com.tien.main.Main</exec.mainClass>
     </properties>
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+    </build>
     <dependencies>  
         <!-- https://mvnrepository.com/artifact/com.formdev/flatlaf -->
         <dependency>
@@ -18,6 +25,11 @@
             <artifactId>flatlaf</artifactId>
             <version>3.5.4</version>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.netbeans.external</groupId>
+            <artifactId>AbsoluteLayout</artifactId>
+            <version>RELEASE220</version>
         </dependency>
     </dependencies>
 </project>
