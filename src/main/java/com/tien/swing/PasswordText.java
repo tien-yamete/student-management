@@ -11,7 +11,7 @@ public class PasswordText extends JPasswordField {
     private Icon suffixIcon;
     private boolean isPasswordVisible = false; // Trạng thái ẩn/hiện mật khẩu
     private String hint = "Password...";
-    private int cornerRadius = 15; // Độ bo góc
+    private int cornerRadius = 30; // Độ bo góc
 
     public PasswordText() {
         setBorder(new EmptyBorder(10, 10, 10, 10)); // Cách lề
@@ -94,8 +94,13 @@ public class PasswordText extends JPasswordField {
         g2.setColor(getBackground());
         g2.fillRoundRect(0, 0, width, height, cornerRadius, cornerRadius);
 
-        // Vẽ viền
-        g2.setColor(new Color(150, 150, 150));
+        // Vẽ viền khi focus
+        if (isFocusOwner()) {
+            g2.setColor(new Color(100, 150, 255)); // Viền xanh khi focus
+        } else {
+            g2.setColor(new Color(150, 150, 150)); // Viền xám khi không focus
+        }
+        
         g2.drawRoundRect(0, 0, width - 1, height - 1, cornerRadius, cornerRadius);
 
         g2.dispose();

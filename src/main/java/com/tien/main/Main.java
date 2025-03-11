@@ -18,6 +18,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             LoginForm frame = new LoginForm();
             frame.setDefaultCloseOperation(LoginForm.EXIT_ON_CLOSE);
+            frame.pack();
             frame.setVisible(true);
             frame.setLocationRelativeTo(null); // Frame Center
             frame.setResizable(false);
