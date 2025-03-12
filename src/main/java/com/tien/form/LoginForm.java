@@ -26,7 +26,7 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         userText1 = new com.tien.swing.UserText();
         jCheckBox1 = new javax.swing.JCheckBox();
-        button1 = new com.tien.swing.Button();
+        loginButton = new com.tien.swing.Button();
         jLabel2 = new javax.swing.JLabel();
         button2 = new com.tien.swing.Button();
         bgLabel = new javax.swing.JLabel();
@@ -49,10 +49,15 @@ public class LoginForm extends javax.swing.JFrame {
         jCheckBox1.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBox1.setText("Remember me");
 
-        button1.setBackground(new java.awt.Color(255, 252, 252));
-        button1.setForeground(new java.awt.Color(2, 2, 2));
-        button1.setText("Login");
-        button1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        loginButton.setBackground(new java.awt.Color(255, 252, 252));
+        loginButton.setForeground(new java.awt.Color(2, 2, 2));
+        loginButton.setText("Login");
+        loginButton.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        loginButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loginButtonActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,7 +91,7 @@ public class LoginForm extends javax.swing.JFrame {
                     .addComponent(jCheckBox1)
                     .addComponent(userText1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(searchText1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(button1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(loginButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(125, 125, 125))
         );
         jPanel1Layout.setVerticalGroup(
@@ -101,7 +106,7 @@ public class LoginForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jCheckBox1)
                 .addGap(18, 18, 18)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -124,6 +129,15 @@ public class LoginForm extends javax.swing.JFrame {
         frame.setResizable(false);
         this.dispose();
     }//GEN-LAST:event_button2ActionPerformed
+
+    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+        MainForm frame = new MainForm();
+        frame.setDefaultCloseOperation(LoginForm.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        frame.pack();
+        frame.setLocationRelativeTo(null); // Frame Center
+        this.dispose();
+    }//GEN-LAST:event_loginButtonActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -159,12 +173,12 @@ public class LoginForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bgLabel;
-    private com.tien.swing.Button button1;
     private com.tien.swing.Button button2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private com.tien.swing.RoundPanelShadow jPanel1;
+    private com.tien.swing.Button loginButton;
     private com.tien.swing.PasswordText searchText1;
     private com.tien.swing.UserText userText1;
     // End of variables declaration//GEN-END:variables

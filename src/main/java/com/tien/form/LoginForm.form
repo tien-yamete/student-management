@@ -51,7 +51,7 @@
                       <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
                       <Component id="userText1" max="32767" attributes="0"/>
                       <Component id="searchText1" max="32767" attributes="0"/>
-                      <Component id="button1" alignment="0" max="32767" attributes="0"/>
+                      <Component id="loginButton" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
               </Group>
@@ -69,7 +69,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="button1" min="-2" max="-2" attributes="0"/>
+                  <Component id="loginButton" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -124,7 +124,7 @@
             <Property name="text" type="java.lang.String" value="Remember me"/>
           </Properties>
         </Component>
-        <Component class="com.tien.swing.Button" name="button1">
+        <Component class="com.tien.swing.Button" name="loginButton">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="fc" green="fc" red="ff" type="rgb"/>
@@ -137,6 +137,9 @@
               <Font name="Segoe UI" size="18" style="1"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="loginButtonActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
