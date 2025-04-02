@@ -9,7 +9,11 @@ public class MainForm extends javax.swing.JFrame {
     public MainForm() {
         initComponents();
         roundSplitPane1.setDividerLocation(.04);
-        
+//        if(roundSplitPane1.getDividerLocation()<.04)
+//            button4.setVisible(false);
+//        else{
+//            button4.setVisible(true);
+//        }
     }
     
     private void showForm(Component com){
@@ -29,7 +33,6 @@ public class MainForm extends javax.swing.JFrame {
         roundPanel2 = new com.tien.swing.RoundPanel();
         button3 = new com.tien.swing.Button();
         jLabel1 = new javax.swing.JLabel();
-        button4 = new com.tien.swing.Button();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
@@ -98,11 +101,6 @@ public class MainForm extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setText("Your Library");
 
-        button4.setBackground(new java.awt.Color(102, 102, 102));
-        button4.setForeground(new java.awt.Color(255, 255, 255));
-        button4.setText("Playlists");
-        button4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
@@ -127,15 +125,10 @@ public class MainForm extends javax.swing.JFrame {
         roundPanel2Layout.setHorizontalGroup(
             roundPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(roundPanel2Layout.createSequentialGroup()
-                .addGroup(roundPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(roundPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(roundPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(10, 10, 10)
+                .addComponent(button3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
         );
@@ -149,9 +142,7 @@ public class MainForm extends javax.swing.JFrame {
                     .addGroup(roundPanel2Layout.createSequentialGroup()
                         .addGap(22, 22, 22)
                         .addComponent(jLabel1)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(button4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(48, 48, 48)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 434, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
@@ -288,7 +279,6 @@ public class MainForm extends javax.swing.JFrame {
     private com.tien.swing.Button button1;
     private com.tien.swing.Button button2;
     private com.tien.swing.Button button3;
-    private com.tien.swing.Button button4;
     private com.tien.swing.Button button5;
     private com.tien.swing.ImageAvatar imageAvatar1;
     private javax.swing.JLabel jLabel1;
